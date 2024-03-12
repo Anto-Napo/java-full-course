@@ -1,9 +1,6 @@
 package com.javafullcourse;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.HashMap;
-import java.util.TreeMap;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -126,7 +123,52 @@ public class Main {
         System.out.println(addInt(3, 5));
         System.out.println(addDouble(2.3, 6.1));
         System.out.println(rec(10));
+
+        System.out.println("\nINTERMEDIATE");
+
+        //! OOP
+        //! Take a look at User.java
+        //? Overloading vs. Overriding. Overloading means that a method with the same name is being modified with different parameters within the same function (Constructors). Overriding means that a method declared in a superclass is being modified with different parameters (.toString()).
+        User u = new User(); // <- default constructor
+        //* If values were public, u.name = "Anto"; But that'd not be secure.
+        u.setName("Anto");
+        u.setMembership("Gold"); // using String
+
+        User u2 = new User();
+        u2.setName("Elouan");
+        u2.setMembership(User.Membership.Silver); // using enum
+
+        System.out.println(u.getName());
+        System.out.println(u2.getMembership());
+
+        User u3 = new User("Julien", User.Membership.Bronze); // Using constructor
+        User u4 = new User("Nicolas", "Silver"); // Constructor overloading
+        User u5 = new User("Nicolas", User.Membership.Silver);
+        System.out.println(u3.toString()); // Method overriding
+        System.out.println(u4.equals(u5));
+
+        ArrayList<User> users = new ArrayList<>(); //* Using a list
+        users.add(u);
+        users.add(new User("Lucas", User.Membership.Gold));
+        System.out.println(users.get(0).toString());
+        for(User user : users) {
+            System.out.println(user.toString());
+        }
+
+        User.admins = new ArrayList<>(); // Static data members
+        User.admins.add(new User("Antoine", User.Membership.Bronze));
+        System.out.println(User.admins.get(0));
+        User.admins.add(new User("Thibault", User.Membership.Silver));
+        User.printAdminNames(); // Static method
+
+        Student s = new Student(); // inheritance
+        s.setVerified(true);
+        System.out.println(s.getVerified());
+        Student s2 = new Student("JP", User.Membership.Gold, true);
+        System.out.println(s2.toString());
+        s2.haveBreakfast();
     }
+
     //! Methods (Functions)
     //? Static means that the function is owned by the class and not by an object of the class.
     //? Void means that the function doesn't return anything.

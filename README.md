@@ -4,7 +4,11 @@
 
 You may want to install the better comments plugin.
 
+Made with various online websites. OOP part: [Caleb Curry YouTube channel](https://www.youtube.com/@codebreakthrough "Caleb Curry")
+
 ## Goals
+
+### Easy
 
 * Variables and Data Types:
     * Variable declaration
@@ -31,6 +35,8 @@ You may want to install the better comments plugin.
     * Method parameters and return
     * Method overloading
 
+### Intermediate
+
 * Classes and Objects:
     * Class definition
     * Object instantiation
@@ -48,13 +54,15 @@ You may want to install the better comments plugin.
     * Try, catch, finally
     * Custom exception classes
 
-* Memory Management:
-    * Garbage Collection
-    * Reference handling
-
 * Input/Output:
     * Input and output streams
     * File handling
+
+### Advanced
+
+* Memory Management:
+  * Garbage Collection
+  * Reference handling
 
 * Threads and Concurrency:
     * Thread creation and management
