@@ -1,5 +1,9 @@
 # Java course
 
+## Misc
+
+You may want to install the better comments plugin.
+
 ## Goals
 
 * Variables and Data Types:
