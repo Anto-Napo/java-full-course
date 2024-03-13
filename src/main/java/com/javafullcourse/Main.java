@@ -1,5 +1,6 @@
 package com.javafullcourse;
 
+import java.io.*;
 import java.util.*;
 
 public class Main {
@@ -126,8 +127,7 @@ public class Main {
 
         System.out.println("\nINTERMEDIATE");
 
-        //! OOP
-        //! Take a look at User.java
+        //! OOP, take a look at User.java
         //? Overloading vs. Overriding. Overloading means that a method with the same name is being modified with different parameters within the same function (Constructors). Overriding means that a method declared in a superclass is being modified with different parameters (.toString()).
         User u = new User(); // <- default constructor
         //* If values were public, u.name = "Anto"; But that'd not be secure.
@@ -167,6 +167,54 @@ public class Main {
         Student s2 = new Student("JP", User.Membership.Gold, true);
         System.out.println(s2.toString());
         s2.haveBreakfast();
+
+        //! Exception handling
+        int[] numbs = {1, 2, 3};
+        try {
+            System.out.println(numbs[10]);
+        } catch (Exception e) {
+            System.out.println("Something went wrong: " + e);
+        } finally {
+            System.out.println("Try catch is finished");
+        }
+
+        int myAge = 15;
+        //? Commented so there's no errors
+        /*try {
+            checkAge(myAge);
+        } catch (CustomException e) {
+            System.out.println("Error: " + e.getMessage());
+        }*/
+
+        //! Input & Output
+        File file = new File("textFile.txt");
+        try {
+            if(file.createNewFile()) {
+                System.out.println("File created: " + file.getName());
+            } else {
+                System.out.println("Already existing file.");
+            }
+
+            FileWriter writer = new FileWriter(file);
+            writer.write("Hi mom");
+            writer.close();
+
+            FileReader reader = new FileReader(file);
+            BufferedReader bufferedReader = new BufferedReader(reader);
+            String line;
+            while((line = bufferedReader.readLine()) != null) {
+                System.out.println(line);
+            }
+            reader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    //! Exception handling
+    static void checkAge(int age) throws CustomException {
+        if(age < 18) {
+            throw new CustomException("You have to be more than 18.");
+        }
     }
 
     //! Methods (Functions)
