@@ -4,7 +4,7 @@
 
 You may want to install the better comments plugin.
 
-Made with various online websites. OOP part: [Caleb Curry YouTube channel](https://www.youtube.com/@codebreakthrough "Caleb Curry")
+Made with various online websites. OOP part: [Caleb Curry YouTube channel](https://www.youtube.com/@codebreakthrough "Caleb Curry"). Threads part: [Bro Code YouTube channel](https://www.youtube.com/@BroCodez "Bro Code")
 
 ## Goals
 

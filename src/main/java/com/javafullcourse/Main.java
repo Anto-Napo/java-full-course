@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.*;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         //! Variables & datatype
         String name = "Anto";
         int age = 15;
@@ -209,6 +209,61 @@ public class Main {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        //! Threads
+        System.out.println(Thread.activeCount()); //? Will return one, the main thread
+
+        System.out.println(Thread.currentThread().getName()); // main
+        Thread.currentThread().setName("The Main Thread");
+        System.out.println(Thread.currentThread().getName()); // The Main Thread
+
+        System.out.println(Thread.currentThread().getPriority()); // 5 (Range of 1-10)
+        Thread.currentThread().setPriority(7);
+        System.out.println(Thread.currentThread().getPriority()); // 10
+
+        System.out.println(Thread.currentThread().isAlive()); // true if alive
+
+        for(int i = 3; i >= 0; i--) {
+            System.out.println(i);
+            Thread.sleep(1); // Countdown with threads
+        }
+        System.out.println("Counter done");
+
+        MyThread thread2 = new MyThread();
+        System.out.println(thread2.isAlive()); // False because it isn't started
+        thread2.setDaemon(true);
+        thread2.start(); // Will execute the run() function
+        System.out.println(thread2.isAlive()); // true
+        System.out.println(Thread.activeCount()); // 2
+
+        System.out.println(thread2.getName()); // Thread-0 by default, always set a name.
+        thread2.setName("Second Thread");
+        System.out.println(thread2.getName());
+
+        System.out.println(thread2.getPriority()); // 7 because it gets the priority of the extended one.
+        thread2.setPriority(1);
+        System.out.println(thread2.getPriority());
+
+        //? There are 2 kinds of thread: user threads and daemon threads.
+        //? The user thread is created by default. After all the non-daemon threads finished, the JVM terminates itself.
+        //? The daemon thread is a low priority thread that runs on the background and does garbage collection
+
+//*     We can set a thread to daemon by doing `thread2.setDaemon(true);`
+        System.out.println(thread2.isDaemon());
+
+        //! Multithreading
+        MyThreadMulti thread3 = new MyThreadMulti(); //? 1st way to create a thread
+
+        MyRunnableMulti runnable1 = new MyRunnableMulti();
+        Thread thread4 = new Thread(runnable1); //? 2nd way to create a thread. It's preferable to use this method because it can still inherit from another class.
+
+        thread3.start();
+        thread3.join(3000); //? Join will pause the other threads, so it begins after this one died or after a delay.
+        thread4.start();
+        System.out.println("Main continues");
+
+        //? If an error occurs in one of the threads, it will not stop the others.
+        //? That happens because the JVM will exit only after all the USER (not daemon) threads are finished.
     }
     //! Exception handling
     static void checkAge(int age) throws CustomException {
