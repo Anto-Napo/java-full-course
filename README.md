@@ -2,13 +2,13 @@
 
 ## Misc
 
-You may want to install the better comments plugin.
+You may want to install the better comments plugin or extension. This project uses Gradle.
 
 Made with various online websites. OOP part: [Caleb Curry YouTube channel](https://www.youtube.com/@codebreakthrough "Caleb Curry"). Threads part: [Bro Code YouTube channel](https://www.youtube.com/@BroCodez "Bro Code").
 
 An advanced part will be soon released in a new repository because of the complexity it needs.
 
-## Goals
+## Topics
 
 ### Easy
 
