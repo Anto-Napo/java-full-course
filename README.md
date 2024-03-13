@@ -4,7 +4,9 @@
 
 You may want to install the better comments plugin.
 
-Made with various online websites. OOP part: [Caleb Curry YouTube channel](https://www.youtube.com/@codebreakthrough "Caleb Curry"). Threads part: [Bro Code YouTube channel](https://www.youtube.com/@BroCodez "Bro Code")
+Made with various online websites. OOP part: [Caleb Curry YouTube channel](https://www.youtube.com/@codebreakthrough "Caleb Curry"). Threads part: [Bro Code YouTube channel](https://www.youtube.com/@BroCodez "Bro Code").
+
+An advanced part will be soon released in a new repository because of the complexity it needs.
 
 ## Goals
 
@@ -58,44 +60,10 @@ Made with various online websites. OOP part: [Caleb Curry YouTube channel](https
     * Input and output streams
     * File handling
 
-### Advanced
-
-* Memory Management:
-  * Garbage Collection
-  * Reference handling
-
 * Threads and Concurrency:
     * Thread creation and management
     * Synchronization
 
-* Network Programming:
+* Network Programming (That will be in a new repository (Link coming soon) :
     * Sockets, servers, and clients
     * Communication protocols (TCP, UDP)
-
-* Graphical Programming:
-    * Swing
-    * JavaFX
-
-* Annotations and Reflection:
-    * Usage of annotations
-    * Accessing class information at runtime
-
-* Functional Programming (Java 8 and later):
-    * Lambda expressions
-    * Streams
-
-* Advanced APIs:
-    * JDBC for database access
-    * Java Servlets for web development
-    * Java EE (Jakarta EE) for enterprise applications
-
-* JUnit and Unit Testing:
-    * Writing unit tests with JUnit
-
-* Java Frameworks:
-    * Spring Framework
-    * Hibernate
-
-* Advanced Object-Oriented Design:
-    * Design Patterns
-    * SOLID principles
