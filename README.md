@@ -64,6 +64,4 @@ An advanced part will be soon released in a new repository because of the comple
     * Thread creation and management
     * Synchronization
 
-* Network Programming (That will be in a new repository (Link coming soon) :
-    * Sockets, servers, and clients
-    * Communication protocols (TCP, UDP)
+* Lambdas
