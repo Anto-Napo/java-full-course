@@ -267,14 +267,14 @@ public class Main {
 
         //! Lambda
         //? You can't have multiple functions in an interface if lambda is used.
-        Student student = () -> {
+        Teacher teacher = () -> {
             System.out.println("Anto");
         };
-        student.getName();
+        teacher.getName();
     }
 
     //! Lambda
-    public interface Student {
+    public interface Teacher {
         void getName();
     }
 

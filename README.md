@@ -64,4 +64,4 @@ An advanced part will be soon released in a new repository because of the comple
     * Thread creation and management
     * Synchronization
 
-* Lambdas
+* Lambda
