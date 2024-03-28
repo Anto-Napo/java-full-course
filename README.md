@@ -6,7 +6,7 @@ You may want to install the better comments plugin or extension. This project us
 
 Made with various online websites. OOP part: [Caleb Curry YouTube channel](https://www.youtube.com/@codebreakthrough "Caleb Curry"). Threads part: [Bro Code YouTube channel](https://www.youtube.com/@BroCodez "Bro Code").
 
-An advanced part will be soon released in a new repository because of the complexity it needs.
+An advanced part will be soon released in a new repository because of the complexity it needs. [Here's the link](https://github.com/Anto-Napo/java-advanced-course "Java advanced course"). However, only the network part is over.
 
 ## Topics
 
